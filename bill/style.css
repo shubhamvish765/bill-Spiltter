@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0 15px;
+    font-family: sans-serif;
+
+}
+
+p{
+    margin-bottom: 8px;
+}
+
+.tip.selected{
+    outline:4px solid orange;
+}
+
+
+main{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-block: 16px;
+}
+.bill-input{
+    color: #6f3cff;
+    font-size: 20px;
+}
+
+main>div{
+    width: 100%;
+}
+
+.input-box input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 4px;
+    font-size: inherit;
+}
+.input-box{
+    border: 1px solid black;
+    padding-left: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.tip-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    color: white;
+    margin-bottom: 10px;
+}
+.tip{
+    background-color: #9c60ff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: inherit;
+}
+
+.custom{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #ddd;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.people{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #ddd;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.generate-bill-btn{
+    border: none;
+    outline: none;
+    background-color: #6f3cff;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px; 
+    color: white;
+}
+
+/*output bill */
+
+.bill-output{
+    background-color: #34568b;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.bill-output p{
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reset-btn{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ddd;
+}
+
+@media(max-width:530px){
+    main{
+        flex-direction: column;
+    }
+}
+input:disabled{
+    cursor: not-allowed;
+}
+.disabled .tip{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
